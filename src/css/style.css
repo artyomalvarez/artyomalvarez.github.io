@@ -6,14 +6,20 @@ body{
     background-color:#0C0C0D;}
 
 .header-container{
-    background-color: #272727;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90px;
+    background-color: #0C0C0D;
     color: #fff;
-    padding: 20px 100px;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between
 
 }
+
+
+
 
 .logo{
     display: flex;
@@ -43,6 +49,9 @@ body{
 .menu_list li a {
 text-decoration: none;
 color: #fff;
+font-size: 1.2rem;
+font-weight: 500;
+gap:20px;
 
 }
 
@@ -66,46 +75,59 @@ color: #fff;
 }
 
 .pets-btn{
-
+display: inline-flex;
+align-items: center;
+text-shadow: 2px 4px 4px rgba(96, 48, 133, 0.5);
 background-color: #B292FF;
 color: white;
-width: 50px;
-padding: 12px 25px;
+width: 70px;
+padding: 12px 5px;
 border-radius: 20px;
 text-decoration: none;
 margin-right: 10px;
+gap: 0.5rem;
+font-size: larger;
+
 }
 
-
-
-
-
-
+.pets-btn svg {
+    width: 1.2rem;;          
+}
 
 
 .hero_container {
   display: flex; 
-  justify-content: space-between; 
-  align-items: center;           
-  gap: 40px;                     
-  padding: 50px 10%;             
+  justify-content: center; 
+  align-items: center;  
+   min-height: calc(100vh - 90px);       
+  gap: 5rem;                     
+
 }
 
 .hero_img img {
-  width: 400px;                  
+  width: 300px;                  
   height: autopx;
   border-radius: 360px;           
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+  box-shadow: 0 20px 40px rgba; 
   object-fit: cover;
+  padding: 0.2rem;
+  background-color: #5d438f;
+
 }
+.hero_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
 
-
+}
 
 
 .badge {
 color: #603085;
 font-weight: bold;
-font-size: 0.9rem;
+font-size: 2rem;
+
 }
 
 h1 {
@@ -117,28 +139,57 @@ color: #FFFFFF;
 p {
     color: #FFFFFF;
 }
+.hero_text p {
+    font-size: 1rem;
+
+}
 
 .hero_buttons {
 display: flex;
-gap: 15px;
+gap: 20px;
+justify-content: space-evenly;
+align-items: start;
+
 }
 .btn_primary {
+display: inline-flex;
+align-items: center;
 background-color: #603085; 
 color: white;
 padding: 12px 25px;
 border-radius: 20px;
 text-decoration: none;
-margin-right: 10px;
+gap: 0.5rem;
+
 
 }
 
 .btn_secondary {
+display: inline-flex; 
+align-items: center;  
 border: 1px solid #d1d5db;
 padding: 12px 25px;
 border-radius: 20px;
 text-decoration: none;
 color: #FFFFFF;
+gap: 0.5rem;
+}
+
+.btn_primary svg {
+    width: 1.2rem;
+
+}
+
+.btn_secondary svg {
+    width: 1.2rem;
 }
 
 
 
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
