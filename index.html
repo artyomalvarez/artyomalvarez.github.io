@@ -7,10 +7,15 @@
     <meta name="description" content="Portafolio de Juan Alvarez">
     <meta name="author" content="Juan Alvarez">
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="pets" href="/pets.html">
+    <link rel="stylesheet" href="src/css/header-style.css">
+    <link rel="stylesheet" href="src/css/main-style.css">
+    <link rel="stylesheet" href="src/css/footer-style.css">
     <meta name="theme-color" content="#09f">
     <link rel="icon" type="image/png" href="/public/icons/icons juanchef.png">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Portafolio Juan Alvarez </title>
+
 </head>
 
 
@@ -25,7 +30,7 @@
 
             <nav>
 
-                <ul class="menu_list">
+                <ul class="menu-list">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -50,16 +55,16 @@
 
 
     <main>
-        <section class="hero_portafolio" id="home">
-            <div class="hero_container">
+        <section class="hero-portafolio" id="home">
+            <div class="hero-container">
 
-                <div class="hero_text">
-                    <span class="badge">Hi, I'm</span>
+                <div class="hero-text">
+                    <span class="badge">Hola Soy</span>
                     <h1>Juan Alvarez</h1>
-                    <p class=" hero_p"> student of national and international cuisine and junior programmer </p>
+                    <p class=" hero-p"> estudiante de cocina y progamador junior</p>
 
-                    <div class="hero_buttons">
-                        <a href="#" class="btn_primary">Download CV
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">Descargar CV
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 class="size-6">
                                 <path fill-rule="evenodd"
@@ -67,7 +72,7 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </a>
-                        <a href="#footer" class="btn_secondary">Contact me
+                        <a href="#contact" class="btn-secondary">contactame
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 class="size-6">
                                 <path
@@ -77,8 +82,8 @@
                     </div>
                 </div>
 
-                <div class="hero_img">
-                    <img src="/public/img/aca.jpg" alt="hero_image">
+                <div class="hero-img">
+                    <img src="/public/img/aca.jpg" alt="hero-image">
                 </div>
 
             </div>
@@ -88,63 +93,61 @@
 
 
         <section class="about-container" id="about">
-            <div class ="about-text-container">
+            <div class="about-main">
                 <div class="about-text">
-                <span class="aboutme-badge">About me</span>
-                <p>Soy un apasionado de la gastronomía y la tecnología, enfocado actualmente en fusionar el arte
-                    culinario
-                    con el desarrollo de software. Como estudiante de cocina con experiencia en coctelería clásica y
-                    repostería, busco llevar la precisión y la creatividad de la cocina al mundo de la programación en
-                    Python. Mi objetivo es desarrollar soluciones digitales innovadoras, como recetarios interactivos y
-                    herramientas técnicas, que conecten estos dos mundos de manera eficiente y estética.</p>
+                    <h2 class="aboutme-badge">Sobre mi</h2>
+                    <p>Soy un apasionado de la gastronomía y la tecnología, enfocado actualmente en fusionar el arte
+                        culinario
+                        con el desarrollo de software. Como estudiante de cocina con experiencia en coctelería clásica y
+                        repostería, busco llevar la precisión y la creatividad de la cocina al mundo de la programación
+                        en
+                        Python. Mi objetivo es desarrollar soluciones digitales innovadoras, como recetarios
+                        interactivos y
+                        herramientas técnicas, que conecten estos dos mundos de manera eficiente y estética.</p>
                 </div>
-                <div>
+                <hr class="section-divider">
+                <div class="skills-wrapper" id="skills">
+                        <div class="skills-container">
+                            <h3 class="skill-text">Tech Skills</h3>
+                            <ul class=skills-list-tecno>
+                                <li><i class="devicon-python-plain colored"></i> </li>
+                                <li><i class="devicon-html5-plain colored"></i></li>
+                                <li><i class="devicon-css3-plain colored"></i></li>
+                                <li><i class="devicon-java-plain-wordmark colored"></i></li>
+                                <li><i class="devicon-cplusplus-plain colored"></i></li>
+                                <li><i class="devicon-javascript-plain colored"></i></li>
+                            </ul>
+                        </div>
+                        <div class="vertical-divider"></div>
 
-                    
+                        <div class="soft-skills-container">
+                            <h3 class="skill-text">Soft Skills</h3>
+                            <ul class="soft-skills-list">
+                                <li>
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    <p><strong>Gestión bajo presión:</strong> Resolución eficiente en entornos críticos.</p>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p><strong>Atención al detalle:</strong> Enfoque en la calidad del código y UI.</p>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-layer-group"></i>
+                                    <p><strong>Multitasking:</strong> Capacidad de priorizar tareas y flujos de trabajo.</p>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-users"></i>
+                                    <p><strong>Trabajo en equipo:</strong> Comunicación clara y colaboración efectiva.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
 
         </section>
 
-
-
-
-
-
-        <section class="Skills" id="Skills">
-            <div class="skills-container">
-                <h2>Skills</h2>
-                <article class="skills-articules">
-                    <div class="skill">
-                        <ul class=skills-list>
-                            <li>Python</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Java</li>
-                            <li>c++</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="skills-ds-culinary">
-                    <div class="skill">
-                        <ul>
-                            <li>Elaboración de coctelería clásica</li>
-                            <li>creación de siropes artesanales y gestión de servicio para eventos</li>
-                            <li>Técnicas de cocina caliente</li>
-                            <li>bases de panadería y resposteria</li>
-                            <li>Planificación de menús y estandarización de recetas</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-
-        </section>
-
-
-
-
-        <section class="projects_container" id="projects">
+        <section class="projects-container" id="projects">
             <h2>Proyectos</h2>
             <div class="projects">
                 <article class="project">
@@ -160,7 +163,7 @@
                 </article>
 
                 <article class="project">
-                    <img src="/public/img/logo del brownie_page-0001.jpg" alt="Proyecto 3">
+                    <img src="#" alt="Proyecto 3">
                     <h3>Inventario Para el Control de Inventario y Facturación</h3>
                     <p>Descripción del proyecto 3.</p>
                 </article>
@@ -172,16 +175,9 @@
                 </article>
             </div>
         </section>
-    </main>
 
-
-
-
-
-    <footer class="main-footer" id=footer>
-
-        <section class="contact_container" id="contact">
-            <h3> Mis contactos</h3>
+        <section class="contact-container" id="contact">
+            <h2>Mis contactos</h2>
             <form action="">
                 <label>
                     nombre:
@@ -191,16 +187,20 @@
                     Email :
                     <input type="email" name="email" id="email">
                 </label>
-                <label>
-                    mesaje:
-                    <input type="textarin" name="mesaje" id="mesaje">
-                </label>
+                <label for="mesaje">Mensaje:</label>
+                <textarea name="mesaje" id="mesaje" rows="5"></textarea>
+                
                 <button type="submit">enviar</button>
             </form>
 
         </section>
+    </main>
 
 
+
+
+
+    <footer class="main-footer" id=footer>
 
         <div class="follow-bar">
             <span class="follow-text">Follow me</span>
