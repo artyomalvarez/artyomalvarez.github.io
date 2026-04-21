@@ -1,19 +1,50 @@
-
-.header-container-pets{
-    background-color: #aeaeae;
-    color: #fff;
-    padding: 20px 100px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center
+* {
+    padding: 0;
+    margin: 0;
 }
 
-#logo-stark{
+body{
+    background-color: black;
+    color: #fff;
+}
+
+.header-container-pets {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
-    gap: 20px;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px
+    justify-content:space-between ;
+    background-color: aqua;
+
 }
+.menu-list{
+    display: flex;
+    gap:50px;
+    background-color: red;  
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list a{
+    text-decoration: none;
+}
+.menu-list i{
+    font-size: 50px;
+}
+
+.logo{
+    font-size: 1rem;
+}
+
+.logo img{
+    width:3.5rem;
+}
+
+.back-btn {
+    background-color: blueviolet;
+}
+.back-btn i{
+    font-size: 1rem;
+
+}
+
