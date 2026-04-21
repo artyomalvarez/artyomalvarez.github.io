@@ -1,19 +1,19 @@
+/* Elimina la barra inicial y la ruta completa, usa rutas relativas */
+@import url('./atoms/atoms.css');
+@import url('./molecules/molecules.css');
+@import url('./organism/organism.css');
+
 * {
     padding: 0;
     margin: 0;
-    
+    box-sizing: border-box; /* Agrega esto para que el padding no rompa el ancho */
 }
 
-
-body{
+body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:#0C0C0D;}
-
-
-
-
+    background-color: #0C0C0D;
+    color: white; /* Para asegurar que el texto se vea */
+}
 
 
 

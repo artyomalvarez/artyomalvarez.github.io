@@ -1,0 +1,127 @@
+:root {
+    --primary-purple: #603085;
+    --accent-purple: #B292FF;
+    --bg-dark: #111;
+    --bg-input: #1a1a1b;
+    --text-white: #FFFFFF;
+    --text-gray: #ccc;
+    --text-light-gray: #bbb;
+    
+}
+
+/* Tipografía Base */
+h1 { font-size: 3.5rem; margin: 10px 0; color: var(--text-white); }
+p { color: var(--text-white); }
+
+
+/* Átomo: Logo */
+.logo img {
+    width: 200px;
+    height: 50px;
+    margin-right: 30px;
+    object-fit: contain; /* Para que no se deforme el logo de JuanChef */
+}
+
+/* Átomo: Enlaces de navegación */
+.menu-list li a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-list li a:hover {
+    color: var(--accent-purple);
+}
+
+/* Badges y Botones Base */
+.badge { color: var(--primary-purple); font-weight: bold; font-size: 2rem; }
+.aboutme-badge {
+    display: inline-block;
+    color: var(--text-white);
+    background-color: var(--primary-purple);
+    font-size: 1.4rem;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Inputs de Formulario */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; padding: 12px 15px;
+    background-color: var(--bg-input);
+    border: 1px solid #333; border-radius: 8px;
+    color: var(--text-white); font-size: 1rem;
+    outline: none; transition: border-color 0.3s ease;
+}
+input:focus, textarea:focus { border-color: var(--accent-purple); }
+
+/* Átomo: Iconos de redes sociales */
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Átomo: Texto de "Follow me" */
+.follow-text {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Átomo: Texto de Copyright */
+.copyright {
+    color: #fff;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* src/css/atoms/atoms.css */
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Fuente moderna */
+    background-color: #0C0C0D;
+    line-height: 1.6;
+}
+
+.skill-text {
+    display: flex;
+    justify-content: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(96, 48, 133, 0.5);
+}
+
+.about-text p {
+    text-align: justify;
+    line-height: 1.8;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* Agrega esto al final de atoms.css */
+.skill-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    display: block;
+}
+/* Títulos de las columnas de Skills */
+.skill-text {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(178, 146, 255, 0.3);
+}

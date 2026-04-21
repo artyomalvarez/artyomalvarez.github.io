@@ -1,0 +1,132 @@
+/* Organismo: Header */
+header {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90px;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    width: 90%;
+    padding: 0 2rem; /* Aumenté un poco el padding para que respire más */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Cambiado a center para que el logo y el texto se alineen bien */
+    gap: 20px;
+}
+
+.menu-list {
+    display: flex;
+    gap: 30px; /* Un poco más de espacio entre links de navegación */
+    list-style: none;
+    align-items: center;
+}
+
+
+
+
+
+/* Sección Hero */
+.hero-container {
+    display: flex; justify-content: center; align-items: center;
+    min-height: calc(100vh - 90px); gap: 5rem;
+}
+.hero-img img {
+    width: 300px; border-radius: 360px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background-color: var(--primary-purple); padding: 0.2rem;
+}
+
+/* Contenedor About */
+.about-container {
+    display: flex; flex-direction: column; gap: 30px; padding: 40px;
+    background-color: var(--bg-dark); border: 2px solid var(--primary-purple);
+    border-radius: 20px; max-width: 1100px; margin: 40px auto;
+}
+
+/* Grid de Skills */
+.skills-container {
+    padding: 10px;
+    /* Esto asegura que los cuadros no queden pegados a la línea vertical */
+}
+.skills-wrapper {
+    display: grid; 
+    grid-template-columns: 1fr auto 1.2fr; /* Las 3 columnas: Skills | Línea | Soft Skills */
+    gap: 40px; 
+    width: 100%; 
+    align-items: start;
+}
+
+/* Divisores */
+.section-divider {
+    width: 80%; /* Ajusta este % si la quieres más larga o corta */
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--primary-purple), transparent);
+    border: none;
+    margin: 40px auto; /* El 'auto' la centra y el 40px le da aire arriba y abajo */
+    opacity: 0.6; /* Para que no sea un golpe de color tan fuerte */
+}
+.vertical-divider {
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--primary-purple), transparent);
+    opacity: 0.8;
+    align-self: stretch; 
+    margin: 0 20px; /* Esto le da espacio a los lados para que respire */
+}
+/* Agrega esto a tu archivo de ORGANISMOS para arreglar el desorden de abajo */
+
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    color: white;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Y para el contenedor de contactos que se ve estirado */
+.contact-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+}
+
+/* Organismo: Footer Principal */
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--accent-purple); /* Usamos la variable que creamos: #B292FF */
+    padding: 2rem 1rem;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Estructura del Formulario dentro del Footer */
+.main-footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.main-footer label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #fff;
+}
