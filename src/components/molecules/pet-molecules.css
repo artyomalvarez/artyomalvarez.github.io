@@ -1,0 +1,70 @@
+
+/* MOLÉCULA: Tarjeta de Mascota Rectangular Compacta */
+.card-marketplace {
+    background-color: var(--batalla-oscuro);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Eliminamos cualquier height: 100% que pueda estirar la caja */
+    height: auto; 
+    transition: 0.3s;
+}
+
+/* Efecto Hover para que se sienta interactivo */
+.card-marketplace:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: var(--azul-glacial);
+}
+
+/* --- Área de la Imagen --- */
+.card-image {
+    width: 100%;
+    /* ESTO ES LO MÁS IMPORTANTE: Forzamos el rectángulo */
+    aspect-ratio: 16 / 9; 
+    background-color: #333; /* Color de respaldo mientras pones la foto */
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    display: block;
+}
+
+.card-marketplace:hover .card-image img {
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
+/* --- Área del Texto --- */
+.card-body {
+    padding: 20px;
+    /* Altura mínima para que el texto no mueva el tamaño de la tarjeta */
+    min-height: 160px; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título de la mascota */
+.card-body h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Descripción de la mascota */
+.card-body p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--acero-palido);
+}
+
+/* --- Footer de la tarjeta con el ícono --- */
+.card-footer {
+    display: flex;
+    justify-content: flex-end; /* Alinea el ícono a la derecha */
+    margin-top: auto; /* Truco de Flexbox para mandarlo siempre al fondo */
+    color: var(--azul-glacial);
+    font-size: 1.3rem;
+}

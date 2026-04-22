@@ -8,7 +8,10 @@
     --text-light-gray: #bbb;
     
 }
-
+html {
+    scroll-behavior: smooth; /* Para que el movimiento sea suave */
+    scroll-padding-top: 100px; /* Ajusta este número según la altura de tu header */
+}
 /* Tipografía Base */
 h1 { font-size: 3.5rem; margin: 10px 0; color: var(--text-white); }
 p { color: var(--text-white); }

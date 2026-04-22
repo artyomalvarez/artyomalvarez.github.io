@@ -1,85 +1,15 @@
+/* 1. Átomos */
+@import url('../components/atoms/pet-atoms.css');
+
+/* 2. Moléculas */
+@import url('../components/molecules/pet-molecules.css');
+
+/* 3. Organismos */
+@import url('../components/organism/pet-organims.css');
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: black;
-    color: #fff;
-}
-
-.header-container-pets {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    justify-content:space-between ;
-    background-color: aqua;
-
-}
-.menu-list{
-    display: flex;
-    gap:50px;
-    background-color: red;  
-}
-.menu-list li{
-    list-style: none;
-}
-.menu-list a{
-    text-decoration: none;
-}
-.menu-list i{
-    font-size: 50px;
-}
-
-.logo{
-    font-size: 1rem;
-}
-
-.logo img{
-    width:3.5rem;
-}
-
-.back-btn {
-    background-color: blueviolet;
-}
-.back-btn i{
-    font-size: 1rem;
-
-}
-
-article{
-    background-color: #ccc;
-    border: 1px solid  blue;
-    padding: 12px 20px;
-    width: 200px;
-    height: 200px;
-}
-span {
-    background-color: #fff;
-    color: black;
-}
-/* hero pets*/
-.hero-pets{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 12rem;
-
-}
-.hero-pets-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
-    
-    gap: 4rem;
-}
-.article-viserys {
-    background-color: blanchedalmond;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-}

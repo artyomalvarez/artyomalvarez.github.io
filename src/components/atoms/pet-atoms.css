@@ -1,0 +1,98 @@
+/* Dentro de src/components/atoms/pet-atoms.css */
+:root {
+    --batalla-oscuro: #404F54;
+    --bruma-fria: #5E6B6F;
+    --acero-palido: #8BA5AF;
+    --azul-glacial: #9EB1B9;
+    --negro-profundo: #0C0C0D;
+}
+
+
+
+
+.goback {
+    text-decoration: none;
+    background-color: var(--batalla-oscuro);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--bruma-fria);
+    transition: 0.3s;
+}
+.goback:hover {
+    background-color: var(--bruma-fria);
+    border-color: var(--azul-glacial);
+}
+
+
+/* El span de categoría */
+.pets-Adopt {
+    display: block;      /* Lo convertimos en bloque */
+    width: fit-content;  /* IMPORTANTE: Para que el fondo azul no ocupe toda la pantalla */
+    margin: 0 auto 25px auto; /* Centra horizontalmente (auto a los lados) */
+    
+    /* Tus otros estilos */
+    background-color: var(--azul-glacial);
+    color: var(--negro-profundo);
+    padding: 5px 25px;
+    border-radius: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.pets-Adopt:hover {
+    background: white; /* Un pequeño brillo al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* Campos del formulario (simplificado para que aplique a cualquier input en la sección Adopt) */
+.Adopt input, 
+.Adopt textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px; /* Espacio entre el texto del label y el cuadro */
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo más oscuro que la tarjeta */
+    border: 1px solid var(--bruma-fria);
+    border-radius: 6px;
+    color: white;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.Adopt input:focus, 
+.Adopt textarea:focus {
+    outline: none;
+    border-color: var(--azul-glacial);
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px var(--azul-glacial);
+}
+
+.Adopt label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px; /* Espacio entre cada campo */
+    font-size: 0.9rem;
+}
+
+.Adopt button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: var(--azul-glacial);
+    color: var(--negro-profundo);
+    border: none;
+    border-radius: 6px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.Adopt button:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}

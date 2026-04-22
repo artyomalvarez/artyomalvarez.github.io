@@ -1,7 +1,7 @@
 /* Elimina la barra inicial y la ruta completa, usa rutas relativas */
-@import url('/src/components/molecules/molecules.css');
-@import url('/src/components/organism/organism.css');
-@import url('/src/components/atoms/atoms.css');
+@import url('../components/atoms/atoms.css');
+@import url('../components/molecules/molecules.css');
+@import url('../components/organism/organism.css');
 
 * {
     padding: 0;
@@ -11,17 +11,5 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0C0C0D;
-    color: white; /* Para asegurar que el texto se vea */
+    background-color: #1a1c1e /* Para asegurar que el texto se vea */
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,96 @@
+/* El Header como un todo */
+.header-pets {
+    background-color: var(--negro-profundo);
+    border-bottom: 2px solid var(--batalla-oscuro);
+    padding: 1rem 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* El contenedor que centra el contenido */
+.header-container {
+    max-width: 1400px; /* Igualamos al ancho del marketplace */
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo del Logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--azul-glacial);
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Área de Navegación */
+.nav-area {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--acero-palido);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--azul-glacial);
+}
+
+
+/* El Header completo */
+/* ORGANISMO: Contenedor Grid del Marketplace */
+.hero-pets-container {
+    display: grid;
+    /* Ajustamos el mínimo a 320px para que quepan bien en rectángulos */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px 5%;
+    /* Alineamos al inicio para que si una tarjeta tiene menos texto no estire a las demás */
+    align-items: start; 
+}
+/* La sección del formulario */
+.adopt-section {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #111;
+    border-radius: 15px;
+    border: 1px solid var(--batalla-oscuro);
+}
+/* Espaciado para la sección del formulario */
+.Adopt {
+    max-width: 550px;       /* Ancho controlado */
+    margin: 60px auto;      /* Centrado y separado de las mascotas */
+    padding: 40px;          /* Espacio interno para que no respire */
+    background-color: var(--batalla-oscuro); /* El color gris oscuro de tu paleta */
+    border: 2px solid var(--bruma-fria);    /* Borde que lo encierra */
+    border-radius: 15px;    /* Esquinas redondeadas */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Sombra para que flote */
+}
+
+.Adopt h2 {
+    text-align: center;
+    color: var(--azul-glacial);
+    margin-bottom: 30px;
+    font-family: 'Cinzel', serif; /* O la fuente que uses para títulos */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
