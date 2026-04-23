@@ -29,24 +29,7 @@
 }
 
 
-/* El span de categoría */
-.pets-Adopt {
-    display: block;      /* Lo convertimos en bloque */
-    width: fit-content;  /* IMPORTANTE: Para que el fondo azul no ocupe toda la pantalla */
-    margin: 0 auto 25px auto; /* Centra horizontalmente (auto a los lados) */
-    
-    /* Tus otros estilos */
-    background-color: var(--azul-glacial);
-    color: var(--negro-profundo);
-    padding: 5px 25px;
-    border-radius: 20px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-.pets-Adopt:hover {
-    background: white; /* Un pequeño brillo al pasar el mouse */
-    transform: scale(1.05);
-}
+
 
 /* Campos del formulario (simplificado para que aplique a cualquier input en la sección Adopt) */
 .Adopt input, 

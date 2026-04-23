@@ -13,3 +13,22 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1a1c1e /* Para asegurar que el texto se vea */
 }
+
+
+@media (max-width: 768px) {
+    .hero-pets-container {
+        /* Bajamos el minmax a 250px para que quepan mejor en pantallas pequeñas */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .card-body h1 {
+        font-size: 1.5rem; /* Ajustamos el tamaño del nombre si es necesario */
+    }
+
+    .card-image img {
+    width: 100%;
+    height: 250px; /* Altura fija para que todas las fotos se vean uniformes */
+    object-fit: cover; /* Evita que las fotos de los gatitos/perritos se estiren */
+}
+}

@@ -1,9 +1,7 @@
 /* 1. Átomos */
 @import url('../components/atoms/pet-atoms.css');
-
 /* 2. Moléculas */
 @import url('../components/molecules/pet-molecules.css');
-
 /* 3. Organismos */
 @import url('../components/organism/pet-organims.css');
 
@@ -13,3 +11,21 @@
     box-sizing: border-box;
 }
 
+
+@media (max-width: 768px) {
+    .hero-pets-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .card-body h1 {
+        font-size: 1.5rem;
+    }
+
+    .card-image img {
+        /* Cambiamos 200px por 100% para que llene la tarjeta */
+        width: 100%; 
+        height: 250px; /* Mantén una altura fija para que no se vea una más larga que otra */
+        object-fit: cover; 
+    }
+}

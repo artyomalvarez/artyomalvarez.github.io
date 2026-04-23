@@ -1,56 +1,35 @@
 
-/* MOLÉCULA: Tarjeta de Mascota Rectangular Compacta */
-.card-marketplace {
-    background-color: var(--batalla-oscuro);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    /* Eliminamos cualquier height: 100% que pueda estirar la caja */
-    height: auto; 
-    transition: 0.3s;
-}
-
-/* Efecto Hover para que se sienta interactivo */
-.card-marketplace:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    border-color: var(--azul-glacial);
-}
-
-/* --- Área de la Imagen --- */
-.card-image {
-    width: 100%;
-    /* ESTO ES LO MÁS IMPORTANTE: Forzamos el rectángulo */
-    aspect-ratio: 16 / 9; 
-    background-color: #333; /* Color de respaldo mientras pones la foto */
-    overflow: hidden;
-}
 
 .card-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Evita que la imagen se deforme */
-    display: block;
+    transition: 0.3s;
+    height: 250px; /* Altura fija para que todas las fotos se vean uniformes */
+    object-fit: cover; /* Evita que las fotos de los gatitos/perritos se estiren */
 }
-
-.card-marketplace:hover .card-image img {
-    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+.card-image img:hover {
+    transform: scale(1.04);
+}
+.card-marketplace {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 /* --- Área del Texto --- */
 .card-body {
-    padding: 20px;
-    /* Altura mínima para que el texto no mueva el tamaño de la tarjeta */
-    min-height: 160px; 
+    padding: 16px;
     display: flex;
     flex-direction: column;
+    gap: 8px; /* Espacio constante entre nombre y descripción */
+    flex-grow: 1; /* Hace que todas las tarjetas midan lo mismo aunque el texto varíe */
 }
-
 /* Título de la mascota */
 .card-body h1 {
     font-size: 1.4rem;
-    margin: 0;
+    margin-bottom: 8px; /* Un poco de espacio con el texto de abajo */
 }
 
 /* Descripción de la mascota */
@@ -58,13 +37,13 @@
     font-size: 0.9rem;
     margin: 0;
     color: var(--acero-palido);
+    line-height: 1.4; /* Mejora la lectura de la historia del Stark/Targaryen */
 }
 
-/* --- Footer de la tarjeta con el ícono --- */
+/* --- Footer --- */
 .card-footer {
     display: flex;
-    justify-content: flex-end; /* Alinea el ícono a la derecha */
-    margin-top: auto; /* Truco de Flexbox para mandarlo siempre al fondo */
-    color: var(--azul-glacial);
-    font-size: 1.3rem;
+    justify-content: flex-end;
+    padding: 0 16px 16px 16px; /* Padding interno para que el icono no toque el borde */
+    color: #777; /* O tu variable de color */
 }

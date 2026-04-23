@@ -109,8 +109,27 @@ border: 1px solid rgba(96, 48, 133, 0.5);
 /* Y para el contenedor de contactos que se ve estirado */
 .contact-container {
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+
+.contact-grid {
+    display: flex;
+    gap: 40px; /* Espacio entre los dos cuadros */
+    flex-wrap: wrap; /* Para que en celular se pongan uno arriba de otro */
+}
+
+/* AQUÍ ENCERRAMOS LOS CUADROS */
+.contact-info-box, 
+.contact-form-box {
+    flex: 1; /* Hace que ambos midan lo mismo */
+    min-width: 300px; /* Evita que se encojan de más */
+    background-color: var(--batalla-oscuro); /* El gris de tu paleta */
     padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* Organismo: Footer Principal */

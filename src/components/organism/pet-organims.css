@@ -59,12 +59,12 @@
 /* ORGANISMO: Contenedor Grid del Marketplace */
 .hero-pets-container {
     display: grid;
-    /* Ajustamos el mínimo a 320px para que quepan bien en rectángulos */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 40px 5%;
-    /* Alineamos al inicio para que si una tarjeta tiene menos texto no estire a las demás */
-    align-items: start; 
+    /* Crea columnas de al menos 300px, pero que se expandan para llenar el espacio */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
 }
 /* La sección del formulario */
 .adopt-section {
