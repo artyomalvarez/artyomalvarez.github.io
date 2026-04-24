@@ -47,6 +47,66 @@ body {
     margin-right: 10px; /* Añadimos un pequeño espacio entre el icono y el texto. */
 }
 
+/* --- SECCIÓN PROYECTOS (ESTILO SIMILAR A MASCOTAS) --- */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.project {
+    background: #111827; /* Un fondo más profundo para que el texto resalte */
+    border: 1px solid var(--primary-purple);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project img {
+    width: 100%;
+    height: 250px; /* Aumentamos a 250px para igualar a las mascotas */
+    object-fit: contain; /* ¡Aquí está el truco! Ahora la imagen se verá COMPLETA sin cortarse */
+    background-color: #000000; /* Fondo negro para que si la imagen es pequeña, no queden huecos feos */
+    border-bottom: 2px solid var(--accent-purple);
+    transition: transform 0.4s ease; /* Preparamos la animación */
+}
+
+/* Esta es la propiedad mágica para que NO se corten los logos o imágenes importantes */
+.project-img-contain {
+    background-color: #0a0a0a !important; /* Fondo oscuro que combina con tu portafolio */
+    padding: 30px; /* Un poco más de aire para que los logos no toquen los bordes */
+    box-sizing: border-box;
+}
+
+/* Efecto de zoom al pasar el mouse por la tarjeta */
+.project:hover img {
+    transform: scale(1.1); /* Zoom sutil igual que en la tienda */
+}
+
+.project h3 {
+    padding: 20px 15px 10px;
+    color: #f9fafb;
+    font-size: 1.2rem;
+    background: linear-gradient(to bottom, rgba(124, 58, 237, 0.1), transparent); /* Sutil toque morado al fondo del título */
+}
+
+.project p {
+    padding: 0 15px 20px;
+    color: #d1d5db; /* Un gris más claro para que sea más fácil de leer */
+    background: #111827; /* Mismo fondo que la tarjeta para uniformidad */
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
 /* --- RESPONSIVE DESIGN --- */
 /* Configuración Escritorio (Reset para el menú) */
 @media (min-width: 769px) {
@@ -73,9 +133,6 @@ body {
 
 /* TASK 2: Media Query para Tablets (específico) */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
-    }
     .skills-list-tecno {
         grid-template-columns: repeat(3, 1fr); /* Galería de 3 columnas en tablet */
     }
@@ -174,12 +231,13 @@ body {
     .hero-buttons { justify-content: center; }
 
     /* Seccion Skills (El grid de 3 columnas a 1) */
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
     .skills-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
-    .projects {
-        grid-template-columns: 1fr; /* En pantallas pequeñas, vuelve a 1 columna */
     }
     .vertical-divider { display: none; } /* Quitamos la línea vertical */
 

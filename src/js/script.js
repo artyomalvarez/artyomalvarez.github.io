@@ -18,7 +18,7 @@ if (btnSecundario && heroParrafo) {
 }
 
 // 3. Punto de entrada único (Smart Loader)
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Si el script encuentra elementos de la tienda, lanza el modal de Mascotas
     if (document.querySelector('.hero-pets') || document.querySelector('.header-pets')) {
         initPetsModal();
@@ -26,7 +26,8 @@ window.onload = () => {
         // Si no, lanza el modal del Portafolio
         initWelcomeModal();
     }
-};
+    initMobileMenu();
+});
 
 /**
  * Crea y muestra el modal de bienvenida dinámicamente
@@ -164,19 +165,16 @@ const initMobileMenu = () => {
     const navElement = document.querySelector('nav') || document.querySelector('.nav-area');
 
     if (menuBurgerButton && closeMenuButton && navElement) {
-        menuBurgerButton.onclick = () => {
+        menuBurgerButton.addEventListener('click', () => {
             navElement.classList.add('nav-visible');
-        };
+        });
 
-        closeMenuButton.onclick = () => {
+        closeMenuButton.addEventListener('click', () => {
             navElement.classList.remove('nav-visible');
-        };
+        });
 
         navElement.querySelectorAll('a').forEach(link => {
-            link.onclick = () => navElement.classList.remove('nav-visible');
+            link.addEventListener('click', () => navElement.classList.remove('nav-visible'));
         });
     }
 };
-
-// Llamamos a la función del menú
-initMobileMenu();
