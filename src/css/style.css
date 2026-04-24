@@ -80,6 +80,16 @@ body {
     .skills-list-tecno {
         grid-template-columns: repeat(3, 1fr); /* Galería de 3 columnas en tablet */
     }
+    .menu-list a {
+        font-size: 0.9rem;
+    }
+    .logo  {
+        width: 8rem;
+        
+    }
+    .header-container {
+        padding: 0;
+    }
 }
 
 /* Celulares (max-width: 768px) */
@@ -152,7 +162,7 @@ body {
         padding: 1rem 1.5rem;
     }
 
-    .menu-list {
+    .menu-list  {
         flex-direction: column;
         gap: 20px;
         justify-content: center;

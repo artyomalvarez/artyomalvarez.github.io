@@ -80,7 +80,6 @@ function initWelcomeModal() {
         margin-bottom: 12px;
       ">Ver mi trabajo →</button>
       <p id="textoCerrar" style="color:#6b7280;font-size:12px;cursor:pointer;margin:0;">
-        Quizás más tarde
       </p>
     `;
 
@@ -139,7 +138,7 @@ function initPetsModal() {
         Encuentra el compañero perfecto y todo lo que necesitas para cuidarlo con amor.
       </p>
       <button id="btnVerMascotas" style="width:100%;background:#6c63ff;color:white;border:none;border-radius:10px;padding:12px 0;font-size:14px;font-weight:500;cursor:pointer;margin-bottom:12px;">Ver mascotas →</button>
-      <p id="btnCerrarWolf" style="color:#666;font-size:12px;cursor:pointer;margin:0;">Quizás más tarde</p>
+      <p id="btnCerrarWolf" style="color:#666;font-size:12px;cursor:pointer;margin:0;"></p>
     `;
 
     document.body.appendChild(overlay);

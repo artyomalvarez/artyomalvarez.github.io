@@ -7,6 +7,6 @@
 @import url('./project-elements.css');
 
 html {
-    scroll-behavior: smooth; /* Para que el movimiento sea suave */
-    scroll-padding-top: 100px; /* Ajusta este número según la altura de tu header */
+    scroll-behavior: smooth; 
+    
 }
