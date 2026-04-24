@@ -1,25 +1,26 @@
+/* ORGANISMO: Grilla de Proyectos */
 .projects-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+    max-width: 1100px; /* Limitamos el ancho para que no se vea gigante */
+    margin: 60px auto; /* Centramos la sección y damos espacio arriba/abajo */
+    padding: 0 20px;   /* Margen interno de seguridad para móviles */
+}
+
+.projects-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 40px;
-    width: 100%;
-    max-width: 1100px;
-    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas solicitadas */
+    gap: 25px;
+    padding: 20px 0;
 }
 
-.project {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Responsividad: Cambio a una columna en móviles */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
