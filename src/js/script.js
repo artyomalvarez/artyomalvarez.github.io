@@ -37,24 +37,35 @@ function initWelcomeModal() {
     const overlay = document.createElement("div");
     overlay.style.cssText = `
       position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 9999;
+      z-index: 999999;
+      padding: 16px;
+      box-sizing: border-box;
+      margin: 0;
     `;
+
+    document.body.appendChild(overlay);
 
     const tarjeta = document.createElement("div");
     tarjeta.style.cssText = `
       background: #1f2937;
       border: 1px solid #374151;
       border-radius: 16px;
-      padding: 2rem;
-      max-width: 360px;
-      width: 90%;
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 340px;
       text-align: center;
       font-family: sans-serif;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1000000;
     `;
 
     tarjeta.innerHTML = `
@@ -63,7 +74,7 @@ function initWelcomeModal() {
       <p style="margin:0 0 1.5rem;color:#9ca3af;font-size:14px;line-height:1.6;">
         Estudiante de cocina y programador junior.<br>Bienvenido a mi portafolio.
       </p>
-      <button id="btnCerrarModal" style="
+      <button id="btnCerrar" style="
         width: 100%;
         background: #7c3aed;
         color: white;
@@ -75,19 +86,25 @@ function initWelcomeModal() {
         cursor: pointer;
         margin-bottom: 12px;
       ">Ver mi trabajo →</button>
-      <p id="textoCerrarModal" style="color:#6b7280;font-size:12px;cursor:pointer;margin:0;">
+      <p id="textoCerrar" style="color:#6b7280;font-size:12px;cursor:pointer;margin:0;">
         Quizás más tarde
       </p>
     `;
 
     overlay.appendChild(tarjeta);
-    document.body.appendChild(overlay);
 
-    const cerrar = () => overlay.remove();
+    document.body.style.overflow = "hidden";
 
-    document.getElementById("btnCerrarModal").onclick = cerrar;
-    document.getElementById("textoCerrarModal").onclick = cerrar;
-    overlay.onclick = (e) => { if (e.target === overlay) cerrar(); };
+    function cerrar() {
+      overlay.remove();
+      document.body.style.overflow = "";
+    }
+
+    document.getElementById("btnCerrar").onclick = cerrar;
+    document.getElementById("textoCerrar").onclick = cerrar;
+    overlay.onclick = function (e) {
+      if (e.target === overlay) cerrar();
+    };
 }
 
 // --- Funcionalidad del Menú Hamburguesa ---
