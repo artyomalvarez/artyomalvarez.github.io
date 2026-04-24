@@ -3,6 +3,11 @@
 @import url('../components/molecules/molecules.css');
 @import url('../components/organism/organism.css');
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 * {
     padding: 0;
     margin: 0;

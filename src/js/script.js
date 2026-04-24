@@ -64,8 +64,6 @@ function initWelcomeModal() {
       text-align: center;
       font-family: sans-serif;
       box-sizing: border-box;
-      position: relative;
-      z-index: 1000000;
     `;
 
     tarjeta.innerHTML = `
@@ -92,18 +90,17 @@ function initWelcomeModal() {
     `;
 
     overlay.appendChild(tarjeta);
-
     document.body.style.overflow = "hidden";
 
     function cerrar() {
-      overlay.remove();
-      document.body.style.overflow = "";
+        overlay.remove();
+        document.body.style.overflow = "";
     }
 
     document.getElementById("btnCerrar").onclick = cerrar;
     document.getElementById("textoCerrar").onclick = cerrar;
     overlay.onclick = function (e) {
-      if (e.target === overlay) cerrar();
+        if (e.target === overlay) cerrar();
     };
 }
 
