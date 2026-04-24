@@ -9,6 +9,12 @@
     box-sizing: border-box; /* Agrega esto para que el padding no rompa el ancho */
 }
 
+/* TASK 3: Imágenes responsivas globales */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #1a1c1e; /* Se agregó el punto y coma faltante */
@@ -37,6 +43,21 @@ body {
 }
 
 /* --- RESPONSIVE DESIGN --- */
+/* Configuración Escritorio (Reset para el menú) */
+@media (min-width: 769px) {
+    .menuburger, .cerrar-menu {
+        display: none;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    .menu-list {
+        display: flex;
+        gap: 20px;
+    }
+}
 
 /* Tablet y Celulares Grandes (max-width: 992px) */
 @media (max-width: 992px) {
@@ -45,19 +66,96 @@ body {
     .about-container { margin: 20px; padding: 25px; }
 }
 
+/* TASK 2: Media Query para Tablets (específico) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+    .skills-list-tecno {
+        grid-template-columns: repeat(3, 1fr); /* Galería de 3 columnas en tablet */
+    }
+}
+
 /* Celulares (max-width: 768px) */
 @media (max-width: 768px) {
     /* Header / Navegación */
-    .header-container {
-        flex-direction: column;
-        height: auto;
-        padding: 1.5rem;
-        gap: 15px;
+    .menuburger {
+        display: block;
     }
-    .menu-list {
-        gap: 15px;
-        flex-wrap: wrap;
+
+    .menuburger button {
+        background: none;
+        border: 1px solid var(--accent-purple);
+        width: 38px;
+        height: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 5px;
+    }
+
+    .menuburger button span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--text-white, #ffffff);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .cerrar-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto inicialmente a la derecha */
+        width: 80%;
+        height: 100vh;
+        background-color: #1a1c1e;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+        border-left: 2px solid var(--accent-purple); /* Borde para que el menú se vea */
+    }
+
+    nav.nav-visible {
+        right: 0; /* Desliza el menú a la vista */
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 1rem 1.5rem;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* TASK 2: Galería de imágenes (Tech Skills) reducida a 2 columnas en móviles */
+    .skills-list-tecno {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* Hero Section */
@@ -95,5 +193,4 @@ body {
 @media (max-width: 480px) {
     h1 { font-size: 2.2rem; }
     .logo img { width: 150px; }
-    .skills-list-tecno { grid-template-columns: repeat(2, 1fr); } /* 2 columnas para que no se vea tan pequeño */
 }

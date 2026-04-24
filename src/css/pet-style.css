@@ -13,13 +13,101 @@
     box-sizing: border-box;
 }
 
+/* --- ESTILOS DEL MENÚ HAMBURGUESA (PETS) --- */
 
-@media (max-width: 768px) {
+/* Ocultar botones en escritorio */
+@media (min-width: 769px) {
+    .menuburger, .cerrar-menu {
+        display: none;
+    }
+}
+
+/* --- RESPONSIVE DESIGN PARA MASCOTAS --- */
+
+/* TASK 2: Media Query para Tablets (pantallas medianas) */
+@media (min-width: 769px) and (max-width: 1024px) {
     .hero-pets-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr); /* Proyectos en 2 columnas */
+    }
+    
+    /* Suponiendo que tengas una galería aparte o uses el mismo grid para imágenes */
+    .gallery-container { 
+        grid-template-columns: repeat(3, 1fr); /* Galería en 3 columnas */
+    }
+}
+
+/* TASK 2: Media Query para Móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+    .menuburger {
+        display: block;
+    }
+
+    .menuburger button {
+        background: none;
+        border: 1px solid var(--azul-glacial);
+        width: 38px;
+        height: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 5px;
+    }
+
+    .menuburger button span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .cerrar-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+
+    .nav-area {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto */
+        width: 80%;
+        height: 100vh;
+        background-color: var(--negro-profundo);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        border-left: 2px solid var(--azul-glacial); /* El "mordo" para que se vea */
+        box-shadow: -10px 0 20px rgba(0,0,0,0.7);
+    }
+
+    .nav-area.nav-visible {
+        right: 0;
+    }
+
+    /* 2. Los proyectos se organicen en una sola columna */
+    .hero-pets-container {
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
     
+    /* 3. La galería de imágenes se reduzca a 2 columnas */
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .card-body h1 {
         font-size: 1.5rem;
     }
