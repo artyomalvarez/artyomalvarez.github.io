@@ -1,0 +1,47 @@
+.logo-container {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans), "Outfit", "Inter", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  user-select: none;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.03);
+}
+
+/* Las llaves { } en Naranja (Código / Acento de tecnología) */
+.logo-brace {
+  color: var(--color-tertiary);
+  transition: color 0.25s ease;
+}
+
+/* El nombre juanjo en Blanco (o negro pizarra en modo claro) */
+.logo-name {
+  color: var(--text-main);
+  transition: color 0.25s ease;
+}
+
+/* El rol chef en Morado (El color que reina) */
+.logo-role {
+  color: var(--color-primary-light);
+  transition: color 0.25s ease;
+}
+
+/* En modo claro ajustamos el morado para contraste óptimo */
+[data-theme="light"] .logo-role {
+  color: var(--color-primary);
+}
+
+/* Hover interactivo */
+.logo-container:hover .logo-brace {
+  color: var(--color-tertiary-hover);
+}
+
+.logo-container:hover .logo-role {
+  filter: brightness(1.15);
+}

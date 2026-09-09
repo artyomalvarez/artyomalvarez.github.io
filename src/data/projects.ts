@@ -2,53 +2,57 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  image: string;
-  imageContain?: boolean;
-  technologies?: string[];
-  links?: {
-    demo?: string;
+  image?: string;
+  technologies: string[];
+  status?: string;
+  links: {
     github?: string;
+    demo?: string;
   };
 }
 
 export const projects: Project[] = [
   {
-    id: "arduino-consola",
-    title: "Proyecto De Arduino consola Funcional",
+    id: "cooperativa-el-progreso",
+    title: "Cooperativa Financiera El Progreso",
     description:
-      "Desarrollo de una consola de juegos interactiva basada en microcontroladores Arduino, utilizando lógica de programación en Java para la interfaz y el control de periféricos.",
-    image: "public/img/Arduino_Logo.svg.png",
-    imageContain: true,
-    technologies: ["Arduino", "Java", "C++"],
-  },
-  {
-    id: "portafolio-web",
-    title: "portafolio web",
-    description:
-      "Creación de una plataforma digital personal bajo estándares modernos de diseño web, enfocada en la experiencia de usuario (UX) y una arquitectura de estilos modular.",
-    image: "public/img/WhatsApp Image 2026-04-23 at 1.01.14 AM.jpeg",
-    imageContain: false,
-    technologies: ["HTML5", "CSS3", "JavaScript", "React"],
+      "Sistema de gestión financiera en C# y .NET estructurado en consola y Web API REST. Implementa lógica de préstamos, gestión de clientes, transacciones multimoneda consumiendo TRM, consultas con LINQ y persistencia en SQL.",
+    technologies: ["C#", ".NET", "ASP.NET Core", "SQL", "LINQ", "REST API"],
     links: {
-      github: "https://github.com/artyomalvarez",
+      github:
+        "https://github.com/artyomalvarez/-Sistema-de-Gestion-Para-La-Cooperativa-Financiera-El-Progreso-",
     },
   },
   {
-    id: "inventario-facturacion",
-    title: "Inventario Para el Control de Inventario y Facturación",
+    id: "indivizia",
+    title: "InDivízia — Gastos Grupales",
+    status: "En desarrollo · Coming Soon",
     description:
-      "Sistema integral diseñado para la optimización de recursos, permitiendo un control riguroso de existencias y la automatización de procesos de facturación comercial.",
-    image: "public/img/logo del brownie_page-0001.jpg",
-    imageContain: true,
-    technologies: ["Python", "Database"],
+      "Plataforma colaborativa para división y conciliación de gastos en equipo desarrollada dentro de Esthercita-Factory. Enfoque en modelado de dominio con POO, transacciones seguras y liquidación equitativa de balances.",
+    technologies: ["C#", ".NET", "POO", "LINQ", "SQL", "Git Colaborativo"],
+    links: {
+      github: "https://github.com/Esthercita-Factory/artyomalvarez-Ind-v-z-",
+    },
   },
   {
-    id: "asistente-virtual-arduino",
-    title: "Asistente Virtual Enfocado En Arduino",
+    id: "veterinary-clinic",
+    title: "Veterinary Clinic System",
     description:
-      "Prototipo de asistente interactivo portátil que integra hardware abierto para proporcionar soluciones de automatización y asistencia mediante programación embebida.",
-    image: "public/img/chatbot-mensaje-chat-vectorart_78370-4104.avif",
-    imageContain: false,
-    technologies: ["Arduino", "Python", "Hardware"],
+      "Sistema integral de gestión para clínicas veterinarias con arquitectura orientada a objetos (POO), agendamiento de citas, historiales médicos de pacientes, flujos asíncronos (async/await), LINQ y suite de pruebas unitarias.",
+    technologies: ["C#", ".NET", "Async/Await", "LINQ", "Unit Testing", "POO"],
+    links: {
+      github:
+        "https://github.com/Esthercita-Factory/artyomalvarez-VeterinaryClinicSystem",
+    },
+  },
+  {
+    id: "altea-gestion",
+    title: "ALTEA — Sistema de Gestión",
+    description:
+      "Single Page Application desarrollada en el ecosistema Riwi / CodeUp. Backend construido con Node.js y base de datos relacional PostgreSQL, con autenticación segura vía JWT y despliegue en Vercel/Render.",
+    technologies: ["Node.js", "PostgreSQL", "JWT", "REST API", "SPA"],
+    links: {
+      github: "https://github.com/artyomalvarez",
+    },
   },
 ];

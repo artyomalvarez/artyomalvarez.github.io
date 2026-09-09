@@ -1,26 +1,59 @@
-:root {
-  /* Paleta Principal */
-  --primary-purple: #603085;
-  --accent-purple: #B292FF;
-  --bg-dark: #111111;
-  --bg-main: #1a1c1e;
-  --bg-input: #1a1a1b;
-  --bg-card: #222426;
-  --badge-bg: #2a2a2a;
-  
-  /* Textos y Bordes */
-  --text-white: #ffffff;
-  --text-gray: #cccccc;
-  --text-light-gray: #bbbbbb;
-  --border-subtle: #333333;
-  --border-light: rgba(255, 255, 255, 0.1);
-  --button-hover: #4d266a;
+/* src/styles/variables.css */
 
-  /* Colores sección Pets */
-  --negro-profundo: #0c0c0d;
-  --batalla-oscuro: #1a1a1b;
-  --azul-glacial: #9EB1B9;
-  --acero-palido: #cccccc;
-  --bruma-fria: #5E6B6F;
-  --batalla-gris: #404F54;
+:root {
+  /* SECUNDARIO (El castillo): Negro absoluto y grises súper oscuros para el fondo */
+  --bg-main: #000000; 
+  --bg-card: #121212; /* Un negro apenas más claro para que las tarjetas se noten */
+  --bg-elevated: #1a1a1a;
+
+  /* PRINCIPAL (El que reina): Morado para botones, bordes, y bloques de impacto */
+  --color-primary: #7c3aed; /* Morado vibrante (puedes ajustarlo luego) */
+  --color-primary-light: #a78bfa; /* Morado claro para textos destacados */
+  --color-primary-dark: #4c1d95; /* Morado profundo para sombras o fondos secundarios */
+
+  /* TERCIARIO (El acento): Naranja para llamar la atención en detalles clave */
+  --color-tertiary: #ea580c; 
+  --color-tertiary-hover: #f97316;
+
+  /* TEXTOS (Para que se pueda leer sobre el negro y el morado) */
+  --text-main: #ffffff; /* Blanco puro para títulos */
+  --text-muted: #9ca3af; /* Gris para los párrafos descriptivos */
+
+  /* ALIAS SEMÁNTICOS & COMPONENTES */
+  --indigo: var(--color-primary);
+  --indigo-strong: var(--color-primary-dark);
+  --orange: var(--color-tertiary);
+  --orange-hover: var(--color-tertiary-hover);
+
+  --font-sans: "Outfit", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --header-height: 88px;
+  --radius: 16px;
+  --radius-pill: 999px;
+}
+
+:root,
+[data-theme="dark"] {
+  --bg: var(--bg-main);
+  --text: var(--text-main);
+  --border: rgba(255, 255, 255, 0.12);
+  --header-bg: rgba(0, 0, 0, 0.82);
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  --ring: var(--color-primary);
+}
+
+[data-theme="light"] {
+  --bg-main: #f9fafb;
+  --bg-card: #ffffff;
+  --bg-elevated: #f3f4f6;
+  --bg: var(--bg-main);
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text: var(--text-main);
+
+  --border: rgba(15, 23, 42, 0.12);
+  --header-bg: rgba(249, 250, 251, 0.85);
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  --ring: var(--color-primary);
 }

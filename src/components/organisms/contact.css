@@ -1,0 +1,112 @@
+.contact {
+  padding-bottom: 2.5rem;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-card-text {
+  color: var(--text-muted);
+  max-width: 65ch;
+  line-height: 1.6;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.contact-channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-channel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.contact-channel-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  color: var(--color-primary-light);
+}
+
+.contact-channel-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.contact-meta-list strong {
+  color: var(--text-main);
+}
+
+.contact-footer {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+[data-theme="light"] .social-icons img,
+[data-theme="light"] .contact-channel-btn img {
+  filter: invert(1);
+}

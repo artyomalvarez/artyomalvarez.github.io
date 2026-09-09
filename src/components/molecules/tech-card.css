@@ -1,0 +1,86 @@
+/* src/components/molecules/tech-card.css */
+
+.tech-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 112px;
+  height: 112px;
+  background-color: var(--bg-card); /* Tu negro secundario */
+  border: 2px solid transparent;
+  border-radius: 24px; /* Squircle */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Badge de Coming Soon */
+.tech-card-badge-soon {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--color-tertiary);
+  color: #ffffff;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.4);
+  white-space: nowrap;
+  pointer-events: none;
+  line-height: 1.2;
+}
+
+/* Hover estándar */
+.tech-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px var(--color-primary-dark);
+  transform: translateY(-5px);
+}
+
+.tech-card-icon {
+  font-size: 2.2rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tech-card-icon svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.tech-card:hover .tech-card-icon {
+  color: var(--color-primary-light);
+  transform: scale(1.08);
+}
+
+.tech-card-name {
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Tarjetas en progreso / Coming Soon */
+.tech-card.is-coming-soon {
+  border-color: rgba(234, 88, 12, 0.3);
+  border-style: dashed;
+}
+
+.tech-card.is-coming-soon:hover {
+  border-color: var(--color-tertiary);
+  box-shadow: 0 0 15px rgba(234, 88, 12, 0.35);
+}
+
+.tech-card.is-coming-soon:hover .tech-card-icon {
+  color: var(--color-tertiary-hover);
+}
