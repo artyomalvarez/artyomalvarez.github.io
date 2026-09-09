@@ -1,0 +1,26 @@
+:root {
+  /* Paleta Principal */
+  --primary-purple: #603085;
+  --accent-purple: #B292FF;
+  --bg-dark: #111111;
+  --bg-main: #1a1c1e;
+  --bg-input: #1a1a1b;
+  --bg-card: #222426;
+  --badge-bg: #2a2a2a;
+  
+  /* Textos y Bordes */
+  --text-white: #ffffff;
+  --text-gray: #cccccc;
+  --text-light-gray: #bbbbbb;
+  --border-subtle: #333333;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --button-hover: #4d266a;
+
+  /* Colores sección Pets */
+  --negro-profundo: #0c0c0d;
+  --batalla-oscuro: #1a1a1b;
+  --azul-glacial: #9EB1B9;
+  --acero-palido: #cccccc;
+  --bruma-fria: #5E6B6F;
+  --batalla-gris: #404F54;
+}

@@ -99,3 +99,40 @@ Desarrollado con 💙 por **Juan Alvarez**
 ---
 
 © 2026. Todos los derechos reservados.
+
+
+
+
+
+
+1. Archivos de Componentes (React)
+Regla: PascalCase (Todas las palabras empiezan con mayúscula, sin espacios ni guiones).
+Por qué: React exige que tus componentes empiecen con mayúscula para diferenciarlos de las etiquetas HTML normales (<header> vs <Header/>).
+
+✅ Correcto: Header.tsx, ProjectCard.tsx, Button.tsx
+
+❌ Incorrecto: header.tsx, project-card.tsx, button.js
+
+2. Carpetas
+Regla: Todo en minúsculas. Si son agrupaciones, usamos plurales.
+Por qué: Evita problemas al subir el código a GitHub o al cambiar entre Linux (que es sensible a mayúsculas) y Windows.
+
+✅ Correcto: atoms, molecules, organisms, styles, data
+
+❌ Incorrecto: Atoms, Molecules, organism (singular)
+
+3. Variables, Funciones y Archivos de Datos (.ts)
+Regla: camelCase (La primera palabra en minúscula, las siguientes con la primera letra en mayúscula).
+Por qué: Es el estándar universal de JavaScript para la lógica.
+
+✅ Correcto: isMenuOpen, toggleMenu(), projects.ts, contactData.ts
+
+❌ Incorrecto: IsMenuOpen, toggle_menu(), Projects.ts
+
+4. Clases de CSS
+Regla: kebab-case (Todo en minúsculas, separado por guiones).
+Por qué: Es el estándar de CSS y facilita la lectura rápida.
+
+✅ Correcto: nav-menu, btn-primary, hero-title
+
+❌ Incorrecto: navMenu, btn_primary, HeroTitle

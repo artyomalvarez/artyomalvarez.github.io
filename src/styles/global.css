@@ -1,0 +1,760 @@
+:root {
+  /* Paleta Principal */
+  --primary-purple: #603085;
+  --accent-purple: #B292FF;
+  --bg-dark: #111111;
+  --bg-main: #1a1c1e;
+  --bg-input: #1a1a1b;
+  --bg-card: #222426;
+  --badge-bg: #2a2a2a;
+  
+  /* Textos y Bordes */
+  --text-white: #ffffff;
+  --text-gray: #cccccc;
+  --text-light-gray: #bbbbbb;
+  --border-subtle: #333333;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --button-hover: #4d266a;
+
+  /* Colores sección Pets */
+  --negro-profundo: #0c0c0d;
+  --batalla-oscuro: #1a1a1b;
+  --azul-glacial: #9EB1B9;
+  --acero-palido: #cccccc;
+  --bruma-fria: #5E6B6F;
+  --batalla-gris: #404F54;
+}
+
+/* --- src/components/atoms/variables.css --- */
+
+
+/* --- src/components/atoms/typography.css --- */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0C0C0D;
+    line-height: 1.6;
+    color: var(--text-white);
+}
+
+h1 { font-size: 3.5rem; margin: 10px 0; color: var(--text-white); }
+p { color: var(--text-white); }
+
+/* Átomo: Badge del Hero */
+.badge {
+    color: var(--primary-purple);
+    font-weight: bold;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Resalte de palabras clave en títulos */
+h1 span, h2 span, h3 span {
+    color: var(--accent-purple);
+    font-weight: bold;
+}
+
+.about-text p {
+    text-align: justify;
+    line-height: 1.8;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+.skill-text {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(96, 48, 133, 0.5);
+}
+
+/* --- src/components/atoms/button.css --- */
+/* Átomo: Botón General */
+button[type="submit"] {
+    background-color: var(--accent-purple);
+    color: var(--bg-dark);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--text-white);
+    box-shadow: 0 0 15px rgba(178, 146, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Átomo: Botón Pets (Copiado de Molecules para ser Atómico) */
+.pets-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-shadow: 2px 4px 4px rgba(96, 48, 133, 0.5);
+    background-color: var(--accent-purple); /* Usando la variable B292FF */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.pets-btn svg {
+    width: 1.2rem;
+}
+
+.pets-btn:hover {
+    background-color: var(--primary-purple);
+    color: #6f52bc;
+    transform: scale(1.05);
+}
+
+/* --- src/components/atoms/input.css --- */
+/* Átomo: Campos de Formulario */
+input[type="text"], 
+input[type="email"], 
+input[type="number"],
+textarea {
+    width: 100%; 
+    padding: 12px 15px;
+    background-color: var(--bg-input);
+    border: 1px solid #444; 
+    border-radius: 8px;
+    color: var(--text-white); 
+    font-size: 1rem;
+    outline: none; 
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+input:focus, textarea:focus { 
+    border-color: var(--accent-purple);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contact-form-box label {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--text-white);
+    font-weight: bold;
+}
+
+/* --- src/components/atoms/logo.css --- */
+.logo img {
+    max-width:100% ;
+    height: 50px;
+    margin-right: 30px;
+    object-fit: contain;
+}
+
+/* --- src/components/atoms/project-elements.css --- */
+/* Átomo: Elementos dentro de la Card de Proyecto */
+.project img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+    background-color: var(--bg-input);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.project-img-contain {
+    object-fit: contain !important;
+    background-color: #f5f5f5 !important;
+    padding: 20px;
+}
+
+.project h3 {
+    color: var(--accent-purple);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- src/components/molecules/hero-buttons.css --- */
+/* Molécula: Grupo de botones del Hero */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-flex; 
+    align-items: center;
+    padding: 12px 20px; 
+    border-radius: 20px;
+    text-decoration: none; 
+    gap: 0.5rem;
+}
+.btn-primary { background-color: var(--primary-purple); color: white; }
+.btn-secondary { border: 1px solid #d1d5db; color: var(--text-white); }
+
+.btn-primary svg, .btn-secondary svg { width: 1.2rem; }
+
+/* --- src/components/molecules/nav-menu.css --- */
+/* Molécula: Menú de navegación */
+.menu-list {
+    display: flex;
+    gap: 30px; /* Un poco más de espacio entre links de navegación */
+    list-style: none;
+    align-items: center;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.menu-list a:hover {
+    color: var(--accent-purple);
+}
+
+/* --- src/components/molecules/skill-card.css --- */
+/* Molécula: Cuadro de Skill Técnica */
+.skills-list-tecno {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; /* Bajamos un poco el gap para que quepan bien los cuadros */
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.skills-list-tecno li {
+    background-color: rgba(26, 26, 27, 0.8); /* Fondo oscuro semitransparente */
+    border: 2px solid var(--primary-purple); /* Borde morado sólido */
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.skills-list-tecno li:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-purple);
+    background-color: var(--bg-input);
+    box-shadow: 0 10px 25px rgba(178, 146, 255, 0.3);
+}
+
+/* Ajuste para que el icono no se salga del cuadro */
+.skills-list-tecno i {
+    font-size: 3.5rem !important; /* Forzamos el tamaño del icono */
+    display: block;
+}
+
+/* Item de Soft Skill */
+.soft-skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.soft-skills-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.soft-skills-list i {
+    color: var(--primary-purple);
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+/* --- src/components/molecules/social-group.css --- */
+/* Molécula: Grupo de Redes Sociales */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover { transform: scale(1.2); }
+
+/* Molécula: Barra de Follow (Esta es una molécula compleja) */
+.follow-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-dark); /* Tu fondo oscuro */
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 1px solid var(--text-white);
+}
+
+/* --- src/components/molecules/project-card.css --- */
+/* MOLÉCULA: Tarjeta de Proyecto Individual */
+.project {
+    background: #111827; /* Fondo oscuro profundo */
+    border: 1px solid var(--primary-purple);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajuste de imagen para que NO se corte */
+.project img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* Muestra la imagen completa */
+    background-color: #000000; /* Fondo negro para rellenar espacios si la imagen es pequeña */
+    border-bottom: 2px solid var(--accent-purple);
+    transition: transform 0.4s ease;
+}
+
+/* Clase especial para logos o imágenes con fondo transparente/blanco */
+.project-img-contain {
+    background-color: #0a0a0a !important;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.project:hover img {
+    transform: scale(1.1); /* Efecto zoom suave */
+}
+
+/* Tipografía y fondos de texto */
+.project h3 {
+    padding: 20px 15px 10px;
+    color: #f9fafb;
+    font-size: 1.2rem;
+    /* Sutil degradado morado de tu portafolio */
+    background: linear-gradient(to bottom, rgba(124, 58, 237, 0.1), transparent);
+}
+
+.project p {
+    padding: 0 15px 20px;
+    color: #d1d5db;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* --- src/components/organism/header.css --- */
+/* Organismo: Header */
+header {
+    width: 100%;
+    padding-top: 10px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(96, 48, 133, 0.5);
+    position: fixed; 
+    top: 0;
+    left: 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90px;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    width: 90%;
+    padding: 0 2rem; 
+    
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-white);
+    letter-spacing: -1px;
+}
+
+.menuburger {
+    display: none;
+}
+
+.cerrar-menu {
+    display: none;
+}
+
+/* --- src/components/organism/hero.css --- */
+.hero-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: calc(100vh - 90px); 
+    gap: 5rem;
+}
+
+.hero-img img {
+    width: 300px; 
+    border-radius: 360px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background-color: var(--primary-purple); padding: 0.2rem;
+}
+
+/* --- src/components/organism/about-section.css --- */
+/* Organismo: Sección Sobre Mí */
+.about-container {
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px; 
+    padding: 40px;
+    background-color: var(--bg-dark); 
+    border: 2px solid var(--primary-purple);
+    border-radius: 20px; 
+    max-width: 1100px; 
+    margin: 40px auto;
+}
+
+.aboutme-badge {
+    display: inline-block; background-color: var(--primary-purple);
+    padding: 8px 20px; border-radius: 8px; margin-bottom: 20px;
+}
+
+/* --- src/components/organism/skills-wrapper.css --- */
+/* Organismo: Grid de Skills */
+.skills-wrapper {
+    display: grid; 
+    grid-template-columns: 1fr auto 1.2fr;
+    gap: 40px; 
+    width: 100%; 
+    align-items: start;
+}
+
+.vertical-divider {
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--primary-purple), transparent);
+    opacity: 0.8;
+    align-self: stretch; 
+    margin: 0 20px; /* Esto le da espacio a los lados para que respire */
+}
+
+.section-divider { 
+    width: 80%; /* Ajusta este % si la quieres más larga o corta */
+    height: 1px; 
+    background: linear-gradient(to right, transparent, var(--primary-purple), transparent); 
+    border: none; 
+    margin: 40px auto; /* El 'auto' la centra y el 40px le da aire arriba y abajo */
+    opacity: 0.6; /* Para que no sea un golpe de color tan fuerte */
+}
+
+/* --- src/components/organism/projects-grid.css --- */
+/* ORGANISMO: Grilla de Proyectos */
+.projects-container {
+    max-width: 1100px; /* Limitamos el ancho para que no se vea gigante */
+    margin: 60px auto; /* Centramos la sección y damos espacio arriba/abajo */
+    padding: 0 20px;   /* Margen interno de seguridad para móviles */
+}
+
+.projects-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas solicitadas */
+    gap: 25px;
+    padding: 20px 0;
+}
+
+/* Responsividad: Cambio a una columna en móviles */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* --- src/components/organism/contact-section.css --- */
+/* Organismo: Sección de Contacto */
+.contact-container { max-width: 1100px; margin: 40px auto; padding: 40px; }
+.contact-container h2 { font-size: 2.8rem; margin-bottom: 40px; }
+
+.contact-grid {
+    display: flex; gap: 40px; flex-wrap: wrap;
+}
+
+.contact-info-box, .contact-form-box {
+    flex: 1; min-width: 320px;
+    background-color: var(--bg-input);
+    padding: 40px; border-radius: 20px;
+    border: 1px solid #333;
+}
+
+.info-list { list-style: none; padding: 0; }
+.info-list li { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.info-list i { color: var(--accent-purple); }
+
+/* --- src/components/organism/footer.css --- */
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--accent-purple);
+    padding: 2rem 1rem;
+    gap: 16px;
+    width: 100%;
+}
+
+.copyright { color: var(--text-white); font-size: 0.9rem; opacity: 0.8; }
+
+/* Estructura del Formulario dentro del Footer (Si se incluye) */
+.main-footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.main-footer label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--text-white);
+}
+
+/* --- src/css/style.css --- */
+/* Elimina la barra inicial y la ruta completa, usa rutas relativas */
+/* Importación de nuevos componentes de Proyectos */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Agrega esto para que el padding no rompa el ancho */
+}
+
+/* TASK 3: Imágenes responsivas globales */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-main); /* Se agregó el punto y coma faltante */
+}
+
+/* Estilos para iconos SVG (clase size-6) */
+/* Esta clase es común en frameworks como Tailwind CSS para definir tamaños. */
+/* Aquí la definimos para que tus SVGs en los botones tengan un tamaño consistente. */
+.size-6 {
+    width: 1.5rem; /* Equivalente a 24px si 1rem = 16px. Ajusta según tu base de rem. */
+    height: 1.5rem;
+}
+
+/* Estilos para iconos Devicon en la sección de Tech Skills */
+.skills-list-tecno li i {
+    font-size: 3rem; /* Tamaño de los iconos de tecnología para que sean visibles. */
+    /* Los colores de devicon suelen venir con la clase 'colored' que ya aplicas. */
+}
+
+/* Estilos para iconos Font Awesome en Soft Skills y Contacto */
+.soft-skills-list li i,
+.info-list li i {
+    font-size: 1.5rem; /* Tamaño de los iconos de soft skills y contacto. */
+    color: var(--accent-purple); /* Asignamos un color de tu paleta para que destaquen. */
+    margin-right: 10px; /* Añadimos un pequeño espacio entre el icono y el texto. */
+}
+
+/* --- RESPONSIVE DESIGN --- */
+/* Configuración Escritorio (Reset para el menú) */
+@media (min-width: 769px) {
+    .menuburger, .cerrar-menu {
+        display: none;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    .menu-list {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+/* Tablet y Celulares Grandes (max-width: 992px) */
+@media (max-width: 992px) {
+    h1 { font-size: 2.8rem; }
+    .hero-container { gap: 2rem; }
+    .about-container { margin: 20px; padding: 25px; }
+}
+
+/* TASK 2: Media Query para Tablets (específico) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skills-list-tecno {
+        grid-template-columns: repeat(3, 1fr); /* Galería de 3 columnas en tablet */
+    }
+    .menu-list a {
+        font-size: 0.9rem;
+    }
+    .logo  {
+        width: 8rem;
+        
+    }
+    .header-container {
+        padding: 0;
+    }
+}
+
+/* Celulares (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Header / Navegación */
+    .menuburger {
+        display: block;
+    }
+
+    .menuburger button {
+        background: none;
+        border: 1px solid var(--accent-purple);
+        width: 38px;
+        height: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 5px;
+    }
+
+    .menuburger button span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--text-white, var(--text-white));
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .cerrar-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto inicialmente a la derecha */
+        width: 80%;
+        height: 100vh;
+        background-color: var(--bg-main);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+        border-left: 2px solid var(--accent-purple); /* Borde para que el menú se vea */
+    }
+
+    nav.nav-visible {
+        right: 0; /* Desliza el menú a la vista */
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 1rem 1.5rem;
+    }
+
+    .menu-list  {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* TASK 2: Galería de imágenes (Tech Skills) reducida a 2 columnas en móviles */
+    .skills-list-tecno {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Hero Section */
+    .hero-container {
+        flex-direction: column-reverse; /* Imagen arriba, texto abajo */
+        text-align: center;
+        gap: 3rem;
+        padding: 40px 20px;
+    }
+    .hero-img img { width: 220px; }
+    .hero-buttons { justify-content: center; }
+
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .vertical-divider { display: none; } /* Quitamos la línea vertical */
+
+    /* Contacto */
+    .contact-grid { flex-direction: column; }
+
+    /* Footer */
+    .follow-bar {
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 20px;
+    }
+}
+
+/* Celulares Pequeños (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    .logo img { width: 150px; }
+}
