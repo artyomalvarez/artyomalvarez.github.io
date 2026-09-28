@@ -1,3 +1,7 @@
+# Evita que GitHub Pages trate el sitio compilado como Jekyll.
+# Tras el primer setup (Settings → Pages → Source: GitHub Actions),
+# cada push a main vuelve a construir y publicar dist/.
+# También se puede disparar a mano: Actions → Deploy to GitHub Pages → Run workflow.
 name: Deploy to GitHub Pages
 
 on:
@@ -28,7 +32,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -42,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: "./dist"
 
       - name: Deploy to GitHub Pages
         id: deployment

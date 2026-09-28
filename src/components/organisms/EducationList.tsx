@@ -6,19 +6,23 @@ export const EducationList = () => {
   return (
     <section className="section" id="education">
       <p className="section-kicker">Formación</p>
-      <h2 className="section-title">Educación y técnica</h2>
+      <h2 className="section-title">Ruta técnica y fundamentos</h2>
       <div className="education-grid">
         {educationList.map((edu) => (
-          <InfoCard
+          <div
             key={edu.id}
-            title={edu.degree}
-            subtitle={edu.institution}
-            period={edu.period}
-            description={edu.description}
-            tags={edu.highlights}
-            badgeText={edu.badgeText}
-            badgeVariant={edu.badgeVariant}
-          />
+            className={edu.featured ? "education-featured" : "education-simple"}
+          >
+            <InfoCard
+              title={edu.degree}
+              subtitle={edu.institution}
+              period={edu.period}
+              description={edu.description}
+              tags={edu.highlights}
+              badgeText={edu.badgeText}
+              badgeVariant={edu.badgeVariant}
+            />
+          </div>
         ))}
       </div>
     </section>

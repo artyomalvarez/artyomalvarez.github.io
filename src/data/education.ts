@@ -7,6 +7,7 @@ export interface EducationItem {
   highlights: string[];
   badgeText?: string;
   badgeVariant?: "yellow" | "blue" | "green" | "purple" | "orange";
+  featured?: boolean;
 }
 
 export const educationList: EducationItem[] = [
@@ -16,10 +17,11 @@ export const educationList: EducationItem[] = [
     institution: "Riwi",
     period: "2026",
     description:
-      "Formación técnica intensiva (~6 meses de práctica rigurosa): desarrollo backend con C# y .NET, construcción de Web APIs REST con ASP.NET Core, consultas eficientes con LINQ, persistencia en SQL Server y metodologías ágiles en equipo.",
-    highlights: ["C# & .NET", "ASP.NET Core", "Node.js", "SQL Server", "Git"],
+      "Formación intensiva en C# y ASP.NET. Lidero un proyecto de equipo como Product Owner: épicas, historias, sprints y dailies. Stack actual: Razor Pages, EF Core, Fluent API y DbContext. Siguiente: migraciones, APIs con JWT, Identity, Blazor y xUnit.",
+    highlights: ["C# & .NET", "ASP.NET", "EF Core", "Product Owner", "Scrum"],
     badgeText: "En curso",
     badgeVariant: "blue",
+    featured: true,
   },
   {
     id: "centro-inca-cocina",
@@ -27,8 +29,8 @@ export const educationList: EducationItem[] = [
     institution: "Centro Inca",
     period: "2025 - Presente",
     description:
-      "Formación culinaria profesional enfocada en estandarización de recetas, producción estricta bajo presión, higiene (BPM) y control de costos. Fuente de rigor, orden metódico y atención al detalle aplicada al código.",
-    highlights: ["Mise en place", "Estandarización", "Trabajo bajo presión"],
+      "Formación culinaria: estandarización, higiene (BPM) y trabajo bajo presión.",
+    highlights: ["Estandarización", "Trabajo bajo presión"],
     badgeText: "Técnico",
     badgeVariant: "yellow",
   },

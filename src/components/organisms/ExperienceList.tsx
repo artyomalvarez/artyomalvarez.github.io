@@ -6,7 +6,7 @@ export const ExperienceList = () => {
   return (
     <section className="section" id="experience">
       <p className="section-kicker">Trayectoria</p>
-      <h2 className="section-title">Experiencia y cocina de campo</h2>
+      <h2 className="section-title">Experiencia operativa</h2>
       <div className="experience-grid">
         {experiences.map((exp) => (
           <InfoCard

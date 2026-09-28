@@ -10,14 +10,17 @@ import { Skills } from "./components/organisms/Skills";
 function App() {
   return (
     <>
+      <a className="skip-link" href="#contenido">
+        Saltar al contenido
+      </a>
       <Header />
-      <main>
+      <main id="contenido" tabIndex={-1}>
         <Hero />
         <About />
+        <Projects />
+        <Skills />
         <ExperienceList />
         <EducationList />
-        <Skills />
-        <Projects />
         <Contact />
       </main>
     </>

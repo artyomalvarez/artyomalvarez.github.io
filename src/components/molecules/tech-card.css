@@ -13,10 +13,9 @@
   border: 2px solid transparent;
   border-radius: 24px; /* Squircle */
   transition: all 0.3s ease;
-  cursor: pointer;
+  cursor: default;
 }
 
-/* Badge de Coming Soon */
 .tech-card-badge-soon {
   position: absolute;
   top: -8px;
@@ -27,7 +26,7 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   background: var(--color-tertiary);
-  color: #ffffff;
+  color: #1a1916;
   padding: 0.15rem 0.5rem;
   border-radius: var(--radius-pill);
   box-shadow: 0 2px 8px rgba(234, 88, 12, 0.4);
@@ -70,7 +69,6 @@
   text-align: center;
 }
 
-/* Tarjetas en progreso / Coming Soon */
 .tech-card.is-coming-soon {
   border-color: rgba(234, 88, 12, 0.3);
   border-style: dashed;

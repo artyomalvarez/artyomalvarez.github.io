@@ -2,9 +2,12 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  /** TODO: agregar captura en public/img/projects/<id>.png */
   image?: string;
+  role: string;
   technologies: string[];
   status?: string;
+  featured?: boolean;
   links: {
     github?: string;
     demo?: string;
@@ -13,10 +16,34 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "indivizia",
+    title: "InDivízia",
+    featured: true,
+    role: "Desarrollo (backend .NET y frontend Vite)",
+    status: "Funcional · próximo: persistencia con EF Core",
+    description:
+      "App para dividir gastos en grupo. Backend en .NET con arquitectura por capas (Domain, Application, Api y Tests) y frontend en Vite. El cálculo está probado con casos como 38 personas donde solo 17 pagaron, y lo validé con un grupo real.",
+    technologies: ["C#", ".NET", "Arquitectura en capas", "Tests", "Vite"],
+    links: {
+      github: "https://github.com/Esthercita-Factory/artyomalvarez-Ind-v-z-",
+    },
+  },
+  {
+    id: "firmeza",
+    title: "Firmeza",
+    role: "Product Owner",
+    status: "Proyecto activo · Riwi",
+    description:
+      "Aplicación de equipo en ASP.NET con Razor Pages y .NET 10. Definí el stack y armé la épica con features e historias de usuario.",
+    technologies: ["C#", ".NET 10", "ASP.NET", "Razor Pages", "EF Core"],
+    links: {},
+  },
+  {
     id: "cooperativa-el-progreso",
     title: "Cooperativa Financiera El Progreso",
+    role: "Desarrollo",
     description:
-      "Sistema de gestión financiera en C# y .NET estructurado en consola y Web API REST. Implementa lógica de préstamos, gestión de clientes, transacciones multimoneda consumiendo TRM, consultas con LINQ y persistencia en SQL.",
+      "Sistema de gestión financiera en C# y .NET, con consola y Web API REST. Cubre préstamos, clientes, transacciones multimoneda con TRM, consultas LINQ y persistencia en SQL.",
     technologies: ["C#", ".NET", "ASP.NET Core", "SQL", "LINQ", "REST API"],
     links: {
       github:
@@ -24,21 +51,11 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "indivizia",
-    title: "InDivízia — Gastos Grupales",
-    status: "En desarrollo · Coming Soon",
-    description:
-      "Plataforma colaborativa para división y conciliación de gastos en equipo desarrollada dentro de Esthercita-Factory. Enfoque en modelado de dominio con POO, transacciones seguras y liquidación equitativa de balances.",
-    technologies: ["C#", ".NET", "POO", "LINQ", "SQL", "Git Colaborativo"],
-    links: {
-      github: "https://github.com/Esthercita-Factory/artyomalvarez-Ind-v-z-",
-    },
-  },
-  {
     id: "veterinary-clinic",
     title: "Veterinary Clinic System",
+    role: "Desarrollo",
     description:
-      "Sistema integral de gestión para clínicas veterinarias con arquitectura orientada a objetos (POO), agendamiento de citas, historiales médicos de pacientes, flujos asíncronos (async/await), LINQ y suite de pruebas unitarias.",
+      "Gestión de clínica veterinaria con POO, citas, historiales, async/await, LINQ y pruebas. Repositorio en Esthercita-Factory.",
     technologies: ["C#", ".NET", "Async/Await", "LINQ", "Unit Testing", "POO"],
     links: {
       github:
@@ -46,13 +63,15 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "altea-gestion",
-    title: "ALTEA — Sistema de Gestión",
+    id: "altea",
+    title: "ALTEA",
+    role: "Desarrollo · Riwi",
     description:
-      "Single Page Application desarrollada en el ecosistema Riwi / CodeUp. Backend construido con Node.js y base de datos relacional PostgreSQL, con autenticación segura vía JWT y despliegue en Vercel/Render.",
-    technologies: ["Node.js", "PostgreSQL", "JWT", "REST API", "SPA"],
+      "SPA con Node/Express, PostgreSQL y JWT. Proyecto de Riwi, desplegada en Vercel/Render.",
+    technologies: ["Node.js", "Express", "PostgreSQL", "JWT", "SPA"],
     links: {
-      github: "https://github.com/artyomalvarez",
+      // TODO: pegar URL del repositorio
+      // TODO: pegar URL del demo (Vercel/Render)
     },
   },
 ];

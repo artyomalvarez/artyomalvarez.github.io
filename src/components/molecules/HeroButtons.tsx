@@ -1,11 +1,11 @@
 import "./hero-buttons.css";
 
-const cvUrl = "/docs/Juan Jose Alvarez Manjarrez .pdf";
+const cvUrl = "/docs/cv-juan-jose-alvarez.pdf";
 
 export const HeroButtons = () => {
   return (
     <div className="hero-buttons">
-      <a href={cvUrl} target="_blank" rel="noreferrer" className="btn-primary">
+      <a href={cvUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
         Descargar CV
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="icon-sm">
           <path

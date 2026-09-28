@@ -2,18 +2,11 @@ import "./logo.css";
 
 export const Logo = () => {
   return (
-    <div className="logo-container" aria-label="{juanjochef}">
-      {/* La llave de apertura en Naranja */}
-      <span className="logo-brace">{'{'}</span>
-
-      {/* Tu nombre en Blanco (o negro en modo claro) */}
+    <div className="logo-container">
+      <span className="logo-brace">{"{"}</span>
       <span className="logo-name">juanjo</span>
-
-      {/* El rol en Morado */}
-      <span className="logo-role">chef</span>
-
-      {/* La llave de cierre en Naranja */}
-      <span className="logo-brace">{'}'}</span>
+      <span className="logo-role">.dev</span>
+      <span className="logo-brace">{"}"}</span>
     </div>
   );
 };

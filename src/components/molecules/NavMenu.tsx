@@ -1,12 +1,11 @@
 import "./nav-menu.css";
 
 const links = [
-  { href: "#home", label: "Inicio" },
+  { href: "#inicio", label: "Inicio" },
   { href: "#about", label: "Sobre mí" },
-  { href: "#experience", label: "Experiencia" },
-  { href: "#education", label: "Educación" },
-  { href: "#skills", label: "Habilidades" },
   { href: "#projects", label: "Proyectos" },
+  { href: "#skills", label: "Habilidades" },
+  { href: "#experience", label: "Experiencia" },
   { href: "#contact", label: "Contacto" },
 ];
 
@@ -17,7 +16,11 @@ type NavMenuProps = {
 
 export const NavMenu = ({ isOpen, onNavigate }: NavMenuProps) => {
   return (
-    <nav className={`nav-shell${isOpen ? " is-open" : ""}`} aria-label="Principal">
+    <nav
+      id="primary-navigation"
+      className={`nav-shell${isOpen ? " is-open" : ""}`}
+      aria-label="Principal"
+    >
       <button type="button" className="nav-close" onClick={onNavigate}>
         Cerrar
       </button>

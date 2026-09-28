@@ -23,7 +23,10 @@ const variantColorMap: Record<string, string> = {
 
 const tagColorMap: Record<string, string> = {
   "C# & .NET": "#3b82f6",
-  "ASP.NET Core": "#22c55e",
+  "ASP.NET": "#22c55e",
+  "EF Core": "#0ea5e9",
+  "Product Owner": "#a855f7",
+  "Scrum": "#ea580c",
   "Node.js": "#a855f7",
   "Mise en place": "#64748b",
   "Técnico": "#eab308",

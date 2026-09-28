@@ -18,6 +18,12 @@
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
 .btn-primary {
   background: var(--orange);
   color: #1a1916;
